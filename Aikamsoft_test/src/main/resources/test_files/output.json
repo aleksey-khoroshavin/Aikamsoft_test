@@ -1,4 +1,22 @@
 {
-  "type": "error",
-  "message": "Подсоединение по адресу localhost:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения."
+  "type": "search",
+  "results": [
+    {
+      "criteria": {
+        "lastNameValue": "Иванов"
+      },
+      "resultsCustomers": [
+        {
+          "firstName": "Антон",
+          "lastName": "Иванов",
+          "totalExpenses": 0
+        },
+        {
+          "firstName": "Николай",
+          "lastName": "Иванов",
+          "totalExpenses": 0
+        }
+      ]
+    }
+  ]
 }

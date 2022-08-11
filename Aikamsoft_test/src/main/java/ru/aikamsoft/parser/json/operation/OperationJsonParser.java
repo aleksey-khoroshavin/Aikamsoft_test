@@ -1,10 +1,16 @@
 package ru.aikamsoft.parser.json.operation;
 
-import com.google.gson.Gson;
+import ru.aikamsoft.exception.WrongArgumentCountException;
+import ru.aikamsoft.exception.WrongArgumentException;
+import ru.aikamsoft.operation.Operation;
 import ru.aikamsoft.result.Result;
 
-public interface OperationJsonParser {
-    Gson parseOperationArguments(String jsonString);
+import java.io.IOException;
 
-    void saveOperationResult(Result result);
+public interface OperationJsonParser {
+    Operation initOperation(String inputSrcName)
+            throws WrongArgumentCountException, WrongArgumentException, IOException;
+
+    void saveOperationResult(Result result, String outputSrcName);
+
 }

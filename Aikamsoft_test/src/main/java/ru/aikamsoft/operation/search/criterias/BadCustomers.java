@@ -1,13 +1,27 @@
 package ru.aikamsoft.operation.search.criterias;
 
-public class BadCustomers implements Criteria{
-    private int badCustomers;
+import com.google.gson.JsonElement;
 
-    public int getBadCustomers() {
-        return badCustomers;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+public class BadCustomers implements Criteria{
+    private int badCustomersValue;
+
+    public int getBadCustomersValue() {
+        return badCustomersValue;
     }
 
-    public void setBadCustomers(int badCustomers) {
-        this.badCustomers = badCustomers;
+    @Override
+    public String getCriteriaName() {
+        return "badCustomers";
+    }
+
+    @Override
+    public void initCriteriaParams(Set<Map.Entry<String, JsonElement>> params) {
+        Iterator<Map.Entry<String, JsonElement>> iterator = params.iterator();
+        Map.Entry<String, JsonElement> entry = iterator.next();
+        badCustomersValue = Integer.parseInt(entry.getValue().getAsString());
     }
 }

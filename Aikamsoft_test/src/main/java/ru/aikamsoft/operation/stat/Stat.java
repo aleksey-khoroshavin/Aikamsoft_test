@@ -1,6 +1,9 @@
 package ru.aikamsoft.operation.stat;
 
-public class Stat {
+import ru.aikamsoft.operation.Operation;
+import ru.aikamsoft.result.Result;
+
+public class Stat implements Operation {
     private String startDate;
 
     private String endDate;
@@ -20,4 +23,10 @@ public class Stat {
     public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
+
+    @Override
+    public Result performOperation() {
+        return null;
+    }
+
 }

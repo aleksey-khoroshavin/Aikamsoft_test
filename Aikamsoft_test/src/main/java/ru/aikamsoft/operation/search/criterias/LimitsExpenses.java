@@ -1,5 +1,11 @@
 package ru.aikamsoft.operation.search.criterias;
 
+import com.google.gson.JsonElement;
+
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
 public class LimitsExpenses implements Criteria {
     private int minExpenses;
     private int maxExpenses;
@@ -8,15 +14,23 @@ public class LimitsExpenses implements Criteria {
         return minExpenses;
     }
 
-    public void setMinExpenses(int minExpenses) {
-        this.minExpenses = minExpenses;
-    }
-
     public int getMaxExpenses() {
         return maxExpenses;
     }
 
-    public void setMaxExpenses(int maxExpenses) {
-        this.maxExpenses = maxExpenses;
+    @Override
+    public String getCriteriaName() {
+        return "limitExpenses";
+    }
+
+    @Override
+    public void initCriteriaParams(Set<Map.Entry<String, JsonElement>> params) {
+        Iterator<Map.Entry<String, JsonElement>> iterator = params.iterator();
+
+        Map.Entry<String, JsonElement> minValue = iterator.next();
+        this.minExpenses = Integer.parseInt(minValue.getValue().getAsString());
+
+        Map.Entry<String, JsonElement> maxValue = iterator.next();
+        this.maxExpenses = Integer.parseInt(maxValue.getValue().getAsString());
     }
 }

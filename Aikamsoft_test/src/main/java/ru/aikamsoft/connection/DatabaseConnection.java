@@ -17,15 +17,17 @@ public class DatabaseConnection {
     private DatabaseConnection(){}
 
     public void createConnection() throws NoDataBaseConnectionException{
-        try(Connection conn = DriverManager.getConnection(url, username, password)){
-            if(conn!= null){
-                this.connection = conn;
-            }else {
-                throw new NoDataBaseConnectionException("Не удалось подключиться к Базе Данных");
-            }
+        try{
+            this.connection = DriverManager.getConnection(url, username, password);
         }
         catch (SQLException exception){
             throw new NoDataBaseConnectionException(exception.getMessage());
+        }
+    }
+
+    public void closeConnection() throws SQLException {
+        if (connection!= null && !connection.isClosed()) {
+            connection.close();
         }
     }
 
