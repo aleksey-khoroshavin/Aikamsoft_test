@@ -1,59 +1,70 @@
 {
-  "type": "search",
-  "results": [
+  "type": "stat",
+  "totalDays": 181,
+  "customers": [
     {
-      "criteria": {
-        "lastName": "Иванов"
-      },
-      "results": [
+      "name": "Валентин Петров",
+      "purchases": [
         {
-          "firstName": "Антон",
-          "lastName": "Иванов"
+          "name": "Сыр",
+          "expenses": 420
         },
         {
-          "firstName": "Николай",
-          "lastName": "Иванов"
-        }
-      ]
-    },
-    {
-      "criteria": {
-        "badCustomers": 3
-      },
-      "results": [
-        {
-          "firstName": "Николай",
-          "lastName": "Иванов"
-        }
-      ]
-    },
-    {
-      "criteria": {
-        "productName": "Минеральная вода",
-        "minTimes": 2
-      },
-      "results": [
-        {
-          "firstName": "Николай",
-          "lastName": "Иванов"
-        }
-      ]
-    },
-    {
-      "criteria": {
-        "minExpenses": 100,
-        "maxExpenses": 1000
-      },
-      "results": [
-        {
-          "firstName": "Николай",
-          "lastName": "Иванов"
+          "name": "Колабаса",
+          "expenses": 600
         },
         {
-          "firstName": "Антон",
-          "lastName": "Иванов"
+          "name": "Сметана",
+          "expenses": 70
+        },
+        {
+          "name": "Минеральная вода",
+          "expenses": 100
         }
-      ]
+      ],
+      "totalExpenses": 1190
+    },
+    {
+      "name": "Николай Иванов",
+      "purchases": [
+        {
+          "name": "Хлеб",
+          "expenses": 30
+        },
+        {
+          "name": "Минеральная вода",
+          "expenses": 200
+        },
+        {
+          "name": "Сыр",
+          "expenses": 420
+        }
+      ],
+      "totalExpenses": 650
+    },
+    {
+      "name": "Антон Иванов",
+      "purchases": [
+        {
+          "name": "Минеральная вода",
+          "expenses": 100
+        },
+        {
+          "name": "Хлеб",
+          "expenses": 60
+        },
+        {
+          "name": "Сыр",
+          "expenses": 420
+        },
+        {
+          "name": "Сметана",
+          "expenses": 140
+        }
+      ],
+      "totalExpenses": 720
     }
-  ]
+  ],
+  "totalExpenses": 2560,
+  "avgExpenses": 853.33
 }

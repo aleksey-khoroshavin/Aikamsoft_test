@@ -27,6 +27,8 @@ public class App
             DatabaseConnection.getInstance().closeConnection();
         }
         catch (Exception exception){
+            exception.printStackTrace();
+
             ErrorResult errorResult = new ErrorResult();
             StringBuilder errorMessage = new StringBuilder();
 
@@ -39,7 +41,12 @@ public class App
 
             errorMessage.append(exception.getMessage());
             errorResult.setMessage(errorMessage.toString());
-            ErrorJsonParser.saveErrorResult(errorResult, argumentParser.getOutputSrcName());
+
+            String errorFileName = argumentParser.getOutputSrcName()!= null
+                    && !argumentParser.getOutputSrcName().isEmpty() ?
+                    argumentParser.getOutputSrcName() : "error.log";
+
+            ErrorJsonParser.saveErrorResult(errorResult, errorFileName);
         }
     }
 }

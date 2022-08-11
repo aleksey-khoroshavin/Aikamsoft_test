@@ -1,14 +1,10 @@
 package ru.aikamsoft.entity;
 
-import java.util.List;
+import java.util.Objects;
 
 public class Customer {
     private String firstName;
     private String lastName;
-
-    private List<Product> products;
-
-    private int totalExpenses;
 
     public String getFirstName() {
         return firstName;
@@ -26,19 +22,26 @@ public class Customer {
         this.lastName = lastName;
     }
 
-    public List<Product> getProducts() {
-        return products;
+    public String getFullName(){
+        return firstName + " " + lastName;
     }
 
-    public void setProducts(List<Product> products) {
-        this.products = products;
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+
+        if (obj.getClass() != this.getClass()) {
+            return false;
+        }
+
+        Customer customer = (Customer) obj;
+        return (this.firstName.equals(customer.firstName) && this.lastName.equals(customer.lastName));
     }
 
-    public int getTotalExpenses() {
-        return totalExpenses;
-    }
-
-    public void setTotalExpenses(int totalExpenses) {
-        this.totalExpenses = totalExpenses;
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName);
     }
 }
