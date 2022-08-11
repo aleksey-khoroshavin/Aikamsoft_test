@@ -1,6 +1,5 @@
 package ru.aikamsoft.result;
 
-import ru.aikamsoft.entity.Customer;
 import ru.aikamsoft.entity.CustomerPurchases;
 
 import java.math.BigDecimal;
