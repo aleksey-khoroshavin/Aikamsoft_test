@@ -28,12 +28,12 @@ public class CustomerPurchasesSearcher{
                 "    from ct1 inner join products on ct1.product_id = products.id\n" +
                 "),\n" +
                 "ct3 as(\n" +
-                "    select ct2.firstname, ct2.lastname, ct2.name, ct2.cost, sum(ct2.cost)\n" +
+                "    select ct2.firstname, ct2.lastname, ct2.name, ct2.cost, sum(ct2.cost) as sum\n" +
                 "    from ct2\n" +
                 "    group by ct2.firstname, ct2.lastname, ct2.name, ct2.cost\n" +
                 "    order by ct2.firstname\n" +
                 ")\n" +
-                "select * from ct3;";
+                "select * from ct3 order by ct3.sum desc;";
 
         return getCustomersPurchasesBySql(sql);
     }

@@ -1,11 +1,11 @@
 package ru.aikamsoft.entity;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class CustomerPurchases {
+public class CustomerPurchases{
     private Customer customer;
-    private final Map<Product, Integer> customerPurchasesPerProducts = new HashMap<>();
+    private final Map<Product, Integer> customerPurchasesPerProducts = new LinkedHashMap<>();
 
     private int customerTotalExpenses = 0;
 

@@ -6,53 +6,27 @@
       "name": "Валентин Петров",
       "purchases": [
         {
-          "name": "Сыр",
-          "expenses": 420
-        },
-        {
           "name": "Колабаса",
           "expenses": 600
         },
         {
-          "name": "Сметана",
-          "expenses": 70
+          "name": "Сыр",
+          "expenses": 420
         },
         {
           "name": "Минеральная вода",
           "expenses": 100
+        },
+        {
+          "name": "Сметана",
+          "expenses": 70
         }
       ],
       "totalExpenses": 1190
     },
     {
-      "name": "Николай Иванов",
-      "purchases": [
-        {
-          "name": "Хлеб",
-          "expenses": 30
-        },
-        {
-          "name": "Минеральная вода",
-          "expenses": 200
-        },
-        {
-          "name": "Сыр",
-          "expenses": 420
-        }
-      ],
-      "totalExpenses": 650
-    },
-    {
       "name": "Антон Иванов",
       "purchases": [
-        {
-          "name": "Минеральная вода",
-          "expenses": 100
-        },
-        {
-          "name": "Хлеб",
-          "expenses": 60
-        },
         {
           "name": "Сыр",
           "expenses": 420
@@ -60,9 +34,35 @@
         {
           "name": "Сметана",
           "expenses": 140
+        },
+        {
+          "name": "Минеральная вода",
+          "expenses": 100
+        },
+        {
+          "name": "Хлеб",
+          "expenses": 60
         }
       ],
       "totalExpenses": 720
+    },
+    {
+      "name": "Николай Иванов",
+      "purchases": [
+        {
+          "name": "Сыр",
+          "expenses": 420
+        },
+        {
+          "name": "Минеральная вода",
+          "expenses": 200
+        },
+        {
+          "name": "Хлеб",
+          "expenses": 30
+        }
+      ],
+      "totalExpenses": 650
     }
   ],
   "totalExpenses": 2560,

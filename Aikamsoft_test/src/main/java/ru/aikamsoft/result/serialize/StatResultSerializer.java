@@ -6,6 +6,7 @@ import ru.aikamsoft.entity.Product;
 import ru.aikamsoft.result.StatResult;
 
 import java.lang.reflect.Type;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 
@@ -19,6 +20,7 @@ public class StatResultSerializer implements JsonSerializer<StatResult> {
 
         JsonArray customersJsonArray = new JsonArray();
         List<CustomerPurchases> customersPurchasesList = statResult.getCustomersPurchases();
+        sortCustomersPurchasesTotalExpenses(customersPurchasesList);
 
         for(CustomerPurchases customerPurchases: customersPurchasesList){
             JsonObject customerJson = new JsonObject();
@@ -37,7 +39,6 @@ public class StatResultSerializer implements JsonSerializer<StatResult> {
 
             customerJson.add("purchases", purchasesJsonArray);
 
-            customerPurchases.countCustomerTotalExpenses();
             customerJson.add("totalExpenses", context.serialize(customerPurchases.getCustomerTotalExpenses()));
 
             customersJsonArray.add(customerJson);
@@ -52,5 +53,14 @@ public class StatResultSerializer implements JsonSerializer<StatResult> {
         json.add("avgExpenses", context.serialize(statResult.getAvgExpenses()));
 
         return json;
+    }
+
+    private void sortCustomersPurchasesTotalExpenses(List<CustomerPurchases> customersPurchasesList){
+        for(CustomerPurchases customerPurchases : customersPurchasesList){
+            customerPurchases.countCustomerTotalExpenses();
+        }
+
+        customersPurchasesList.sort(Comparator.comparingInt(CustomerPurchases::getCustomerTotalExpenses).reversed());
+
     }
 }
