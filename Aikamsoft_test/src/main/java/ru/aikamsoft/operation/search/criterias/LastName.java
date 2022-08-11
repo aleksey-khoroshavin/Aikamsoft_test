@@ -7,10 +7,10 @@ import java.util.Map;
 import java.util.Set;
 
 public class LastName implements Criteria{
-    private String lastNameValue;
+    private String lastName;
 
-    public String getLastNameValue() {
-        return lastNameValue;
+    public String getLastName() {
+        return lastName;
     }
 
     @Override
@@ -22,6 +22,6 @@ public class LastName implements Criteria{
     public void initCriteriaParams(Set<Map.Entry<String, JsonElement>> params) {
         Iterator<Map.Entry<String, JsonElement>> iterator = params.iterator();
         Map.Entry<String, JsonElement> entry = iterator.next();
-        lastNameValue = entry.getValue().getAsString();
+        lastName = entry.getValue().getAsString();
     }
 }

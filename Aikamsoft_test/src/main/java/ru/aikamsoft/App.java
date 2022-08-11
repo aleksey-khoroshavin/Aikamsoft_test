@@ -13,9 +13,9 @@ import java.sql.SQLException;
 public class App
 {
     public static void main( String[] args ){
+        ArgumentParser argumentParser = new ArgumentParser();
 
         try {
-            ArgumentParser argumentParser = new ArgumentParser();
             argumentParser.parseCliArguments(args);
             DatabaseConnection.getInstance().createConnection();
 
@@ -39,7 +39,7 @@ public class App
 
             errorMessage.append(exception.getMessage());
             errorResult.setMessage(errorMessage.toString());
-            ErrorJsonParser.saveErrorResult(errorResult, "./src/main/resources/test_files/error_log.json");
+            ErrorJsonParser.saveErrorResult(errorResult, argumentParser.getOutputSrcName());
         }
     }
 }

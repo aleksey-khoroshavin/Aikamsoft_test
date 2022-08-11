@@ -50,8 +50,6 @@ insert into purchases (customer_id, product_id, date_of_purchase) values (1, 2, 
 
 insert into purchases (customer_id, product_id, date_of_purchase) values (2, 1, to_date('09.08.2022', 'dd.mm.yyyy'));
 insert into purchases (customer_id, product_id, date_of_purchase) values (2, 1, to_date('03.04.2022', 'dd.mm.yyyy'));
-insert into purchases (customer_id, product_id, date_of_purchase) values (2, 5, to_date('04.03.2022', 'dd.mm.yyyy'));
-insert into purchases (customer_id, product_id, date_of_purchase) values (2, 5, to_date('11.06.2022', 'dd.mm.yyyy'));
 insert into purchases (customer_id, product_id, date_of_purchase) values (2, 5, to_date('29.08.2022', 'dd.mm.yyyy'));
 insert into purchases (customer_id, product_id, date_of_purchase) values (2, 2, to_date('05.04.2022', 'dd.mm.yyyy'));
 
@@ -60,4 +58,3 @@ insert into purchases (customer_id, product_id, date_of_purchase) values (3, 4, 
 insert into purchases (customer_id, product_id, date_of_purchase) values (3, 3, to_date('04.03.2022', 'dd.mm.yyyy'));
 insert into purchases (customer_id, product_id, date_of_purchase) values (3, 5, to_date('11.06.2022', 'dd.mm.yyyy'));
 insert into purchases (customer_id, product_id, date_of_purchase) values (3, 1, to_date('29.08.2022', 'dd.mm.yyyy'));
-insert into purchases (customer_id, product_id, date_of_purchase) values (3, 2, to_date('05.04.2022', 'dd.mm.yyyy'));

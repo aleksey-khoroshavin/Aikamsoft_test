@@ -7,10 +7,10 @@ import java.util.Map;
 import java.util.Set;
 
 public class BadCustomers implements Criteria{
-    private int badCustomersValue;
+    private int badCustomers;
 
-    public int getBadCustomersValue() {
-        return badCustomersValue;
+    public int getBadCustomers() {
+        return badCustomers;
     }
 
     @Override
@@ -22,6 +22,6 @@ public class BadCustomers implements Criteria{
     public void initCriteriaParams(Set<Map.Entry<String, JsonElement>> params) {
         Iterator<Map.Entry<String, JsonElement>> iterator = params.iterator();
         Map.Entry<String, JsonElement> entry = iterator.next();
-        badCustomersValue = Integer.parseInt(entry.getValue().getAsString());
+        badCustomers = Integer.parseInt(entry.getValue().getAsString());
     }
 }
