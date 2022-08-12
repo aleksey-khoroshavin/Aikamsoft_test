@@ -3,15 +3,29 @@
   "totalDays": 181,
   "customers": [
     {
-      "name": "Валентин Петров",
+      "name": "Николай Иванов",
       "purchases": [
-        {
-          "name": "Колабаса",
-          "expenses": 600
-        },
         {
           "name": "Сыр",
           "expenses": 420
+        },
+        {
+          "name": "Минеральная вода",
+          "expenses": 100
+        },
+        {
+          "name": "Хлеб",
+          "expenses": 30
+        }
+      ],
+      "totalExpenses": 550
+    },
+    {
+      "name": "Валентин Петров",
+      "purchases": [
+        {
+          "name": "Колбаса",
+          "expenses": 300
         },
         {
           "name": "Минеральная вода",
@@ -22,15 +36,11 @@
           "expenses": 70
         }
       ],
-      "totalExpenses": 1190
+      "totalExpenses": 470
     },
     {
       "name": "Антон Иванов",
       "purchases": [
-        {
-          "name": "Сыр",
-          "expenses": 420
-        },
         {
           "name": "Сметана",
           "expenses": 140
@@ -44,27 +54,9 @@
           "expenses": 60
         }
       ],
-      "totalExpenses": 720
-    },
-    {
-      "name": "Николай Иванов",
-      "purchases": [
-        {
-          "name": "Сыр",
-          "expenses": 420
-        },
-        {
-          "name": "Минеральная вода",
-          "expenses": 200
-        },
-        {
-          "name": "Хлеб",
-          "expenses": 30
-        }
-      ],
-      "totalExpenses": 650
+      "totalExpenses": 300
     }
   ],
-  "totalExpenses": 2560,
-  "avgExpenses": 853.33
+  "totalExpenses": 1320,
+  "avgExpenses": 440.0
 }

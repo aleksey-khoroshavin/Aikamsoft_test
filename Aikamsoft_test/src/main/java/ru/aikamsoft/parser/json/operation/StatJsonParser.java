@@ -35,7 +35,7 @@ public class StatJsonParser implements OperationJsonParser{
             String startDate = json.get("startDate").getAsString();
             String endDate = json.get("endDate").getAsString();
 
-            DateValidator dateValidator = new DateValidator("yyyy-mm-dd");
+            DateValidator dateValidator = new DateValidator("yyyy-MM-dd");
             dateValidator.validateDateStr(startDate);
             dateValidator.validateDateStr(endDate);
             dateValidator.checkStartDateBeforeEndDate(startDate, endDate);

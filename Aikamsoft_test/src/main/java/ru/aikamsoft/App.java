@@ -27,7 +27,6 @@ public class App
             DatabaseConnection.getInstance().closeConnection();
         }
         catch (Exception exception){
-            exception.printStackTrace();
 
             ErrorResult errorResult = new ErrorResult();
             StringBuilder errorMessage = new StringBuilder();

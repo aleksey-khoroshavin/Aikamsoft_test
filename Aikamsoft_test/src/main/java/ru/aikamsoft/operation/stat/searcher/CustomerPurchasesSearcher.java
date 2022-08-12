@@ -22,6 +22,8 @@ public class CustomerPurchasesSearcher{
                 "    where\n" +
                 "    purchases.date_of_purchase >= to_date('"+startDate+"', 'yyyy-mm-dd')\n" +
                 "      and purchases.date_of_purchase <= to_date('"+endDate+"', 'yyyy-mm-dd')\n" +
+                "    and date_part('dow', purchases.date_of_purchase) != 0\n" +
+                "    and date_part('dow', purchases.date_of_purchase) != 6" +
                 "),\n" +
                 "ct2 as(\n" +
                 "    select ct1.firstname, ct1.lastname, products.name, products.cost\n" +

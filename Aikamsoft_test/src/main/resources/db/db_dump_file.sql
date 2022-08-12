@@ -38,7 +38,7 @@ insert into customers(firstname, lastname) values ('Валентин', 'Петр
 insert into products (name, cost) values ('Минеральная вода', 100);
 insert into products (name, cost) values ('Хлеб', 30);
 insert into products (name, cost) values ('Сметана', 70);
-insert into products (name, cost) values ('Колабаса', 300);
+insert into products (name, cost) values ('Колбаса', 300);
 insert into products (name, cost) values ('Сыр', 420);
 
 insert into purchases (customer_id, product_id, date_of_purchase) values (1, 2, to_date('09.08.2022', 'dd.mm.yyyy'));

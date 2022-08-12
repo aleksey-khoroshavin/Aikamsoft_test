@@ -1,5 +1,6 @@
 package ru.aikamsoft.operation.stat;
 
+import ru.aikamsoft.exception.WrongDateFormatException;
 import ru.aikamsoft.operation.Operation;
 import ru.aikamsoft.operation.stat.searcher.CustomerPurchasesSearcher;
 import ru.aikamsoft.parser.util.TotalDaysCounter;
@@ -23,7 +24,7 @@ public class Stat implements Operation {
     }
 
     @Override
-    public Result performOperation() throws SQLException {
+    public Result performOperation() throws SQLException, WrongDateFormatException {
         StatResult statResult = new StatResult();
 
         TotalDaysCounter totalDaysCounter = new TotalDaysCounter();
