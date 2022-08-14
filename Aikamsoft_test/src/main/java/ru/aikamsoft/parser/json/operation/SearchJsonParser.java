@@ -56,7 +56,7 @@ public class SearchJsonParser implements OperationJsonParser{
 
     private List<Criteria> initCriterias(JsonArray jsonArray) throws WrongArgumentCountException, WrongArgumentException {
 
-        List<Criteria> criterias = new LinkedList<>();
+        List<Criteria> criterias = new ArrayList<>();
 
         for(JsonElement element : jsonArray){
             criterias.add(initCriteria(element.getAsJsonObject()));

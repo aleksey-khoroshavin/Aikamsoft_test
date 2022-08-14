@@ -1,62 +1,59 @@
 {
-  "type": "stat",
-  "totalDays": 181,
-  "customers": [
+  "type": "search",
+  "results": [
     {
-      "name": "Николай Иванов",
-      "purchases": [
+      "criteria": {
+        "lastName": "Иванов"
+      },
+      "results": [
         {
-          "name": "Сыр",
-          "expenses": 420
+          "firstName": "Антон",
+          "lastName": "Иванов"
         },
         {
-          "name": "Минеральная вода",
-          "expenses": 100
-        },
-        {
-          "name": "Хлеб",
-          "expenses": 30
+          "firstName": "Николай",
+          "lastName": "Иванов"
         }
-      ],
-      "totalExpenses": 550
+      ]
     },
     {
-      "name": "Валентин Петров",
-      "purchases": [
+      "criteria": {
+        "badCustomers": 3
+      },
+      "results": [
         {
-          "name": "Колбаса",
-          "expenses": 300
-        },
-        {
-          "name": "Минеральная вода",
-          "expenses": 100
-        },
-        {
-          "name": "Сметана",
-          "expenses": 70
+          "firstName": "Николай",
+          "lastName": "Иванов"
         }
-      ],
-      "totalExpenses": 470
+      ]
     },
     {
-      "name": "Антон Иванов",
-      "purchases": [
+      "criteria": {
+        "productName": "Минеральная вода",
+        "minTimes": 2
+      },
+      "results": [
         {
-          "name": "Сметана",
-          "expenses": 140
-        },
-        {
-          "name": "Минеральная вода",
-          "expenses": 100
-        },
-        {
-          "name": "Хлеб",
-          "expenses": 60
+          "firstName": "Николай",
+          "lastName": "Иванов"
         }
-      ],
-      "totalExpenses": 300
+      ]
+    },
+    {
+      "criteria": {
+        "minExpenses": 100,
+        "maxExpenses": 1000
+      },
+      "results": [
+        {
+          "firstName": "Николай",
+          "lastName": "Иванов"
+        },
+        {
+          "firstName": "Антон",
+          "lastName": "Иванов"
+        }
+      ]
     }
-  ],
-  "totalExpenses": 1320,
-  "avgExpenses": 440.0
+  ]
 }
