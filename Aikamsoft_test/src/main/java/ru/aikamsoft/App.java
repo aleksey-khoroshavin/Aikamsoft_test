@@ -43,7 +43,7 @@ public class App
 
             String errorFileName = argumentParser.getOutputSrcName()!= null
                     && !argumentParser.getOutputSrcName().isEmpty() ?
-                    argumentParser.getOutputSrcName() : "error.log";
+                    argumentParser.getOutputSrcName() : "error.json";
 
             ErrorJsonParser.saveErrorResult(errorResult, errorFileName);
         }
